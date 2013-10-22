@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Quantl Search Data Sets</h1>
+</div>
+
+<form class="form-inline filter">
+  <input type="text" ng-model="model.filter.name" placeholder="Enter dataset name">
+  <button type="btn" class="btn" ng-click="search()">Search</button>
+</form>
+
+<h3>Results</h3>
+<ul>
+  <li ng-repeat="result in data | startFrom:currentPage*pageSize | limitTo:pageSize">
+    <a ng-href="/#/getDataSet/{{ result.source_code }}/{{ result.code }}">{{ result.name }}</a>
+  </li>
+</ul>
+
+<div ng-if="numberOfPages() > 0">
+  <button type="button" class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+      Previous
+  </button>
+  {{ currentPage + 1 }} / {{ numberOfPages() }}
+  <button type="button" class="btn" ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+      Next
+  </button>
+</div>

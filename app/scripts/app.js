@@ -7,9 +7,17 @@ angular.module('quantlTestApp', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
+      // .when('/', {
+      //   templateUrl: 'views/main.html',
+      //   controller: 'MainCtrl'
+      // })
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/searchDataSets.html',
+        controller: 'SearchDataSetsCtrl'
+      })
+      .when('/getDataSet/:dataset1/:dataset2', {
+        templateUrl: 'views/getDataSet.html',
+        controller: 'GetDataSetCtrl'
       })
       .otherwise({
         redirectTo: '/'
