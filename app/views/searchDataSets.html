@@ -7,19 +7,20 @@
   <button type="btn" class="btn" ng-click="search()">Search</button>
 </form>
 
-<h3>Results</h3>
-<ul>
-  <li ng-repeat="result in data | startFrom:currentPage*pageSize | limitTo:pageSize">
-    <a ng-href="/#/getDataSet/{{ result.source_code }}/{{ result.code }}">{{ result.name }}</a>
-  </li>
-</ul>
+<div ng-show="numberOfPages() > 0">
+  <h3>Results ({{ data.length }})</h3>
 
-<div ng-if="numberOfPages() > 0">
-  <button type="button" class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
-      Previous
+  <ul>
+    <li ng-repeat="result in data | startFrom:currentPage*pageSize | limitTo:pageSize">
+      <a ng-href="/#/getDataSet/{{ result.source_code }}/{{ result.code }}">{{ result.name }}</a>
+    </li>
+  </ul>
+
+  <button type="button" class="btn" ng-disabled="currentPage == 0" ng-click="currentPage = currentPage - 1">
+      <i class="icon-arrow-left"></i>
   </button>
   {{ currentPage + 1 }} / {{ numberOfPages() }}
-  <button type="button" class="btn" ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
-      Next
+  <button type="button" class="btn" ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage = currentPage + 1">
+      <i class="icon-arrow-right"></i>
   </button>
 </div>
