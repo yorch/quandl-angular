@@ -15,7 +15,7 @@ angular.module('quantlTestApp', [
         templateUrl: 'views/searchDataSets.html',
         controller: 'SearchDataSetsCtrl'
       })
-      .when('/getDataSet/:dataset1/:dataset2', {
+      .when('/getDataSet/:source_code/:code', {
         templateUrl: 'views/getDataSet.html',
         controller: 'GetDataSetCtrl'
       })
