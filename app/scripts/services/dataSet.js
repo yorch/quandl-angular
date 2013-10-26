@@ -13,17 +13,17 @@ angular.module('quandlAngularApp')
       search: function(query, callback) {
         var url = dataSetSearchUrl(query);
 
-        $log.info('Searching DataSets', query, 'at', url);
+        $log.debug('Searching DataSets', query, 'at', url);
         $http.get(url)
           .success(function(data) {
-            $log.info('Search DataSet Success', query, 'result', data);
+            $log.debug('Search DataSet Success', query, 'result', data);
             callback(data);
           });
       },
       promise_search: function(query) {
         var url = dataSetSearchUrl(query);
 
-        $log.info('Searching DataSets', query, 'at', url);
+        $log.debug('Searching DataSets', query, 'at', url);
         return $http.get(url).then(function(response) {
           return limitToFilter(response.data.docs, 15);
         });
@@ -39,10 +39,10 @@ angular.module('quandlAngularApp')
         };
         var url = apiUrl.buildUrl(section, params)
 
-        $log.info('Getting DataSet', name, 'at', url);
+        $log.debug('Getting DataSet', name, 'at', url);
         $http.get(url)
           .success(function(data) {
-            $log.info('DataSet Success', name, 'result', data);
+            $log.debug('DataSet Success', name, 'result', data);
             callback(data);
           });
       }
