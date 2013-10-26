@@ -17,4 +17,8 @@ angular.module('quantlTestApp')
           $scope.model.dataSet = data;
         });
     };
+
+    $scope.clearDataSet = function() {
+      $scope.model.dataSet = {};
+    };
   });
