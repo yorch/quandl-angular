@@ -1,16 +1,18 @@
-<div class="page-header">
-  <h1>Search Data Sets</h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Search Data Sets</h1>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="dataSetName">DataSet Name</label>
+        <input type="text" id="dataSetName" class="form-control" ng-model="model.filter.name" placeholder="Enter DataSet name">
+      </div>
+      <button type="button" class="btn btn-primary" ng-click="search()">Search</button>
+    </form>
+  </div>
 </div>
 
-<form class="form-inline filter">
-  <div class="form-group">
-    <label class="sr-only" for="dataSetName">DataSet Name</label>
-    <input type="text" id="dataSetName" class="form-control" ng-model="model.filter.name" placeholder="Enter dataset name">
-  </div>
-  <button type="button" class="btn btn-primary" ng-click="search()">Search</button>
-</form>
-
-<div ng-show="numberOfPages() > 0">
+<div class="container" ng-show="numberOfPages() > 0">
   <h3>Results ({{ data.length }})</h3>
 
   <ul>

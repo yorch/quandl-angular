@@ -1,37 +1,39 @@
-<div class="page-header">
-  <h1>Quantl Data Sets</h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Data Sets</h1>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="dataSetName">DataSet Name</label>
+        <input type="text" id="dataSetName" class="form-control" ng-model="model.filter.dataSet" placeholder="Enter DataSet Name">
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="startDateFilter">Start Date</label>
+        <input type="date" id="startDateFilter" class="form-control" ng-model="model.filter.startDate">
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="endDateFilter">End Date</label>
+        <input type="date" id="endDateFilter" class="form-control" ng-model="model.filter.endDate">
+      </div>
+      <button type="button" class="btn btn-primary" ng-click="getDataSet()">Get Data Set</button>
+      <button type="button" class="btn btn-default" ng-click="clearDataSet()">Clear</button>
+    </form>
+  </div>
 </div>
 
-<div class="well">
-  <form class="form-inline filter">
-    <div class="form-group">
-      <label class="sr-only" for="dataSetName">DataSet Name</label>
-      <input type="text" id="dataSetName" class="form-control" ng-model="model.filter.dataSet" placeholder="DataSet Name">
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="startDateFilter">Start Date</label>
-      <input type="date" id="startDateFilter" class="form-control" ng-model="model.filter.startDate">
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="endDateFilter">End Date</label>
-      <input type="date" id="endDateFilter" class="form-control" ng-model="model.filter.endDate">
-    </div>
-    <button type="button" class="btn btn-primary" ng-click="getDataSet()">Get Data Set</button>
-    <button type="button" class="btn btn-default" ng-click="clearDataSet()">Clear</button>
-  </form>
+<div class="container">
+  <h2>{{ model.dataSet.name }}</h2>
+
+  <table class="table table-striped table-hover table-condensed">
+    <thead>
+      <tr>
+        <th ng-repeat="column in model.dataSet.column_names">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="dataElem in model.dataSet.data">
+        <td ng-repeat="column in model.dataSet.column_names">{{ dataElem[$index] }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<h2>{{ model.dataSet.name }}</h2>
-
-<table class="table table-striped table-hover table-condensed">
-  <thead>
-    <tr>
-      <th ng-repeat="column in model.dataSet.column_names">{{ column }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="dataElem in model.dataSet.data">
-      <td ng-repeat="column in model.dataSet.column_names">{{ dataElem[$index] }}</td>
-    </tr>
-  </tbody>
-</table>
