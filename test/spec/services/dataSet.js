@@ -3,7 +3,7 @@
 describe('Service: dataSet', function () {
 
   // load the service's module
-  beforeEach(module('QuantltestApp'));
+  beforeEach(module('quantlTestApp'));
 
   // instantiate service
   var dataSet;

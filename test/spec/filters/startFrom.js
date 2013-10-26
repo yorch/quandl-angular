@@ -12,8 +12,8 @@ describe('Filter: startFrom', function () {
   }));
 
   it('should return the input prefixed with "startFrom filter:"', function () {
-    var text = 'angularjs';
-    expect(startFrom(text)).toBe('startFrom filter: ' + text);
+    var arr = ['a', 'b', 'c', 'd', 'e'];
+    expect(startFrom(arr, 2)).toBe(['c', 'd', 'e']);
   });
 
 });
