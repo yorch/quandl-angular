@@ -3,7 +3,8 @@
 angular.module('quandlAngularApp', [
   'ngCookies',
   'ngResource',
-  'ngSanitize'
+  'ngSanitize',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider

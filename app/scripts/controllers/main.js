@@ -6,9 +6,13 @@ angular.module('quandlAngularApp')
       dataSet: {},
       filter: {
         dataSet: 'BITCOIN/MTGOXUSD',
-        startDate: "2013-09-01",
-        endDate: "2013-12-31"
+        startDate: '2013-09-01',
+        endDate: '2013-12-31'
       }
+    };
+
+    $scope.searchDataSets = function(name) {
+      return dataSet.promise_search(name);
     };
 
     $scope.getDataSet = function() {

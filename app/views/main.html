@@ -5,7 +5,13 @@
     <form class="form-inline">
       <div class="form-group">
         <label class="sr-only" for="dataSetName">DataSet Name</label>
-        <input type="text" id="dataSetName" class="form-control" ng-model="model.filter.dataSet" placeholder="Enter DataSet Name">
+        <input type="text" id="dataSetName" class="form-control"
+          ng-model="model.filter.dataSet"
+          typeahead="value.source_code + '/' + value.code for value in searchDataSets($viewValue)"
+          typeahead-editable="false"
+          typeahead-min-length="3"
+          typeahead-on-select="getDataSet()"
+          placeholder="Enter DataSet Name">
       </div>
       <div class="form-group">
         <label class="sr-only" for="startDateFilter">Start Date</label>
