@@ -3,7 +3,7 @@
 describe('Controller: SearchDataSetsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('quantlTestApp'));
+  beforeEach(module('quandlAngularApp'));
 
   var SearchDataSetsCtrl,
     scope;

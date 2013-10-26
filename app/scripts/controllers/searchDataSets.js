@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quantlTestApp')
+angular.module('quandlAngularApp')
   .controller('SearchDataSetsCtrl', function($scope, dataSet) {
     $scope.currentPage = 0;
     $scope.pageSize = 10;

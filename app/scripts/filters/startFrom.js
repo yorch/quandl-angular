@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quantlTestApp')
+angular.module('quandlAngularApp')
   .filter('startFrom', function() {
     return function(input, start) {
       if (input) {

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quantlTestApp')
+angular.module('quandlAngularApp')
   .controller('MainCtrl', function($scope, $http, $log, appSettings, dataSet) {
     $scope.model = {
       dataSet: {},

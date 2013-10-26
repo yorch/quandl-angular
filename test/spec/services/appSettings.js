@@ -3,7 +3,7 @@
 describe('Service: appSettings', function () {
 
   // load the service's module
-  beforeEach(module('quantlTestApp'));
+  beforeEach(module('quandlAngularApp'));
 
   // instantiate service
   var appSettings;

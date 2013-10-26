@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quantlTestApp')
+angular.module('quandlAngularApp')
   .service('apiUrl', function(appSettings) {
     return {
       toQueryString: function(params) {

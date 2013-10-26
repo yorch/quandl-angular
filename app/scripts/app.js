@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quantlTestApp', [
+angular.module('quandlAngularApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize'

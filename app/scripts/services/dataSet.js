@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quantlTestApp')
+angular.module('quandlAngularApp')
   .service('dataSet', function($http, $log, apiUrl) {
     return {
       search: function(query, callback) {

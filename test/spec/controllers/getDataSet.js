@@ -3,7 +3,7 @@
 describe('Controller: GetDataSetCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('quantlTestApp'));
+  beforeEach(module('quandlAngularApp'));
 
   var GetDataSetCtrl,
     scope;

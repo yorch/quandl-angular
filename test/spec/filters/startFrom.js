@@ -3,7 +3,7 @@
 describe('Filter: startFrom', function () {
 
   // load the filter's module
-  beforeEach(module('quantlTestApp'));
+  beforeEach(module('quandlAngularApp'));
 
   // initialize a new instance of the filter before each test
   var startFrom;
