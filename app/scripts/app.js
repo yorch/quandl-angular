@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('quandlAngularApp', [
+  'ngRoute',
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ui.bootstrap'
 ])
+  .config(function($logProvider){
+    $logProvider.debugEnabled(true);
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
