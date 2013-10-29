@@ -28,33 +28,16 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Quandl Test</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/#/searchDataSets">Search Data Sets</a></li>
-                </ul>
-            </div><!--/.navbar-collapse -->
-        </div>
-    </div>
+    <div ng-include="'views/navigation.html'"></div>
 
     <!-- Add your site or application content here -->
     <div ng-view=""></div>
 
     <div class="container">
-        <hr>
-        <footer>
-            <p>&copy; Barnaby Tech, Inc 2013</p>
-        </footer>
+      <hr>
+      <footer>
+        <p>&copy; Barnaby Tech, Inc 2013</p>
+      </footer>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -71,28 +54,29 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
-        <!-- build:js scripts/plugins.js -->
-        <!-- bower:js -->
-        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+    <!-- build:js scripts/plugins.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/modules.js -->
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/services/appSettings.js"></script>
-        <script src="scripts/services/apiUrl.js"></script>
-        <script src="scripts/services/dataSet.js"></script>
-        <script src="scripts/filters/startFrom.js"></script>
-        <script src="scripts/controllers/searchDataSets.js"></script>
-        <script src="scripts/controllers/getDataSet.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/appSettings.js"></script>
+    <script src="scripts/services/apiUrl.js"></script>
+    <script src="scripts/services/dataSet.js"></script>
+    <script src="scripts/filters/startFrom.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/navigation.js"></script>
+    <script src="scripts/controllers/searchDataSets.js"></script>
+    <script src="scripts/controllers/getDataSet.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
